@@ -5,19 +5,19 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-public class LogCurrentWorkoutScreen extends AppCompatActivity {
+public class SpecificExerciseScreen extends AppCompatActivity {
 
     ViewPager mViewPager;
     int[] images = {R.drawable.bench_press, R.drawable.deadlift, R.drawable.chest_press};
-    ViewPagerAdapter mViewPagerAdapter;
+    ViewPagerAdapter2 mViewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_current_workout_screen);
+        setContentView(R.layout.activity_specific_exercise_screen);
 
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
-        mViewPagerAdapter = new ViewPagerAdapter(LogCurrentWorkoutScreen.this, images);
+        mViewPagerAdapter = new ViewPagerAdapter2(SpecificExerciseScreen.this, images);
         mViewPager.setAdapter(mViewPagerAdapter);
     }
 }
