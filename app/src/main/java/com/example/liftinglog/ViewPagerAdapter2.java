@@ -49,16 +49,16 @@ public class ViewPagerAdapter2 extends PagerAdapter {
                     Intent intent = new Intent(view.getContext(), BenchPressGraph.class);
                     view.getContext().startActivity(intent);
                 }
-//                else if(position == 1){
-//                    Toast.makeText(context, "Deadlift selected", Toast.LENGTH_SHORT).show();
-//                    Intent intent1 = new Intent(view.getContext(), InputInfoScreen.class);
-//                    view.getContext().startActivity(intent1);
-//                }
-//                else if(position == 2){
-//                    Toast.makeText(context, "Chest Press selected", Toast.LENGTH_SHORT).show();
-//                    Intent intent2 = new Intent(view.getContext(), InputInfoScreen.class);
-//                    view.getContext().startActivity(intent2);
-//                }
+                else if(position == 1){
+                    Toast.makeText(context, "Deadlift selected", Toast.LENGTH_SHORT).show();
+                    Intent intent1 = new Intent(view.getContext(), DeadliftGraph.class);
+                    view.getContext().startActivity(intent1);
+                }
+                else if(position == 2){
+                    Toast.makeText(context, "Chest Press selected", Toast.LENGTH_SHORT).show();
+                    Intent intent2 = new Intent(view.getContext(), ChestPressGraph.class);
+                    view.getContext().startActivity(intent2);
+                }
             }
         });
 

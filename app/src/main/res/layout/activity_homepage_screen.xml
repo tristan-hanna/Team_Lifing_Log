@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812" />
+        app:layout_constraintVertical_bias="0.938" />
 
     <ImageButton
         android:id="@+id/SpecificExerciseButton"
@@ -47,7 +47,7 @@
         android:id="@+id/ProgressButton"
         android:layout_width="110dp"
         android:layout_height="104dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="260dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
         android:id="@+id/OverallText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="Check Current Overall Progress"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

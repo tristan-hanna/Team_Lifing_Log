@@ -5,22 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/weights"
-    tools:context=".BenchPressInputInfoScreen">
+    tools:context=".DeadliftInputInfoScreen">
 
-    <EditText
-        android:id="@+id/WeightUsed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bench_press_text" />
 
     <EditText
         android:id="@+id/Reps"
@@ -33,26 +19,15 @@
         android:text=""
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WeightUsed" />
-
-    <ImageView
-        android:id="@+id/MuscleImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arm" />
 
     <Button
         android:id="@+id/Submit_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -60,27 +35,49 @@
         app:layout_constraintTop_toBottomOf="@+id/Reps" />
 
     <Button
-        android:id="@+id/To_BenchPressGraph"
+        android:id="@+id/To_DeadliftGraph"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="See Results"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Submit_Button"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
-        android:id="@+id/bench_press_text"
+        android:id="@+id/deadlift_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Bench Press"
+        android:layout_marginTop="68dp"
+        android:text="Deadlift"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MuscleImage" />
+
+    <ImageView
+        android:id="@+id/MuscleImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arm" />
+
+    <EditText
+        android:id="@+id/WeightUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deadlift_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

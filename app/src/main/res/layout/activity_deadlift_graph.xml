@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BenchPressGraph">
+    tools:context=".DeadliftGraph">
 
     <com.jjoe64.graphview.GraphView
-        android:id="@+id/Bench_Press_GraphView"
+        android:id="@+id/Deadlift_GraphView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -1,6 +1,5 @@
 package com.example.liftinglog;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,8 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
-import java.util.Objects;
 
 public class ViewPagerAdapter extends PagerAdapter {
     Context context;
@@ -48,17 +45,17 @@ public class ViewPagerAdapter extends PagerAdapter {
             public void onClick(View view) {
                 if(position == 0){
                     Toast.makeText(context, "Bench Press selected", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(view.getContext(), InputInfoScreen.class);
+                    Intent intent = new Intent(view.getContext(), BenchPressInputInfoScreen.class);
                     view.getContext().startActivity(intent);
                 }
                 else if(position == 1){
                     Toast.makeText(context, "Deadlift selected", Toast.LENGTH_SHORT).show();
-                    Intent intent1 = new Intent(view.getContext(), InputInfoScreen.class);
+                    Intent intent1 = new Intent(view.getContext(), DeadliftInputInfoScreen.class);
                     view.getContext().startActivity(intent1);
                 }
                 else if(position == 2){
                     Toast.makeText(context, "Chest Press selected", Toast.LENGTH_SHORT).show();
-                    Intent intent2 = new Intent(view.getContext(), InputInfoScreen.class);
+                    Intent intent2 = new Intent(view.getContext(), ChestPressInputInfoScreen.class);
                     view.getContext().startActivity(intent2);
                 }
             }

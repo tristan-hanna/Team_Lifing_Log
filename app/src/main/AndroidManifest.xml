@@ -10,13 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LiftingLog">
         <activity
+            android:name=".OverallProgressScreen"
+            android:exported="true" />
+        <activity
+            android:name=".ChestPressInputInfoScreen"
+            android:exported="true" />
+        <activity
+            android:name=".ChestPressGraph"
+            android:exported="true" />
+        <activity
+            android:name=".DeadliftInputInfoScreen"
+            android:exported="true" />
+        <activity
+            android:name=".DeadliftGraph"
+            android:exported="true" />
+        <activity
             android:name=".BenchPressGraph"
             android:exported="true" />
         <activity
             android:name=".SpecificExerciseScreen"
             android:exported="true" />
         <activity
-            android:name=".InputInfoScreen"
+            android:name=".BenchPressInputInfoScreen"
             android:exported="true" />
         <activity
             android:name=".LogCurrentWorkoutScreen"

@@ -33,13 +33,13 @@ public class HomepageScreen extends AppCompatActivity {
             }
         });
 
-//        ImageButton overallprogress = (ImageButton) findViewById(R.id.ProgressButton);
-//        overallprogress.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent3 = new Intent(HomepageScreen.this, OverallProgressScreen.class );
-//                startActivity(intent);
-//            }
-//        });
+        ImageButton overallprogress = (ImageButton) findViewById(R.id.ProgressButton);
+        overallprogress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(HomepageScreen.this, OverallProgressScreen.class );
+                startActivity(intent3);
+            }
+        });
     }
 }
