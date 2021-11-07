@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480358074042",
+    "project_id": "lifting-log-18f99",
+    "storage_bucket": "lifting-log-18f99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480358074042:android:2a8a93fab41341f752e483",
+        "android_client_info": {
+          "package_name": "com.example.liftinglog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480358074042-fc223bjvl91c1rt9jomdji8ib4auut1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiXD5EGRKyCJL1oJcAGMHtyo0fukABqi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480358074042-fc223bjvl91c1rt9jomdji8ib4auut1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

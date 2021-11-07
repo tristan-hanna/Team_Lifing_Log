@@ -41,5 +41,14 @@ public class HomepageScreen extends AppCompatActivity {
                 startActivity(intent3);
             }
         });
+
+        Button signout = (Button) findViewById(R.id.SignOutButton);
+        signout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent4 = new Intent(HomepageScreen.this, LoginScreen.class);
+                startActivity(intent4);
+            }
+        });
     }
 }
