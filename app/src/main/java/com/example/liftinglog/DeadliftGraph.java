@@ -24,8 +24,8 @@ public class DeadliftGraph extends AppCompatActivity {
 
     GraphView Deadlift_GraphView;
     LineGraphSeries deadlift_series;
-    Calendar sdf = Calendar.getInstance();
-    String workout_date = DateFormat.getDateInstance().format(sdf.getTime());
+
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     FirebaseDatabase ExerciseDatabase;
     DatabaseReference ExerciseReference;
@@ -47,7 +47,7 @@ public class DeadliftGraph extends AppCompatActivity {
             @Override
             public String formatLabel(double value, boolean isValueX) {
                 if(isValueX) {
-                    return workout_date;
+                    return sdf.format(new Date((long)value));
                 }
                 else{
                     return super.formatLabel(value, isValueX);
