@@ -45,18 +45,21 @@ public class ViewPagerAdapter extends PagerAdapter {
             public void onClick(View view) {
                 if(position == 0){
                     Toast.makeText(context, "Bench Press selected", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(view.getContext(), BenchPressInputInfoScreen.class);
+                    Intent intent = new Intent(view.getContext(), InputInfoScreen.class);
+                    intent.putExtra("Exercise", "Bench Press");
                     view.getContext().startActivity(intent);
                 }
                 else if(position == 1){
                     Toast.makeText(context, "Deadlift selected", Toast.LENGTH_SHORT).show();
-                    Intent intent1 = new Intent(view.getContext(), DeadliftInputInfoScreen.class);
-                    view.getContext().startActivity(intent1);
+                    Intent intent = new Intent(view.getContext(), InputInfoScreen.class);
+                    intent.putExtra("Exercise", "Deadlift");
+                    view.getContext().startActivity(intent);
                 }
                 else if(position == 2){
                     Toast.makeText(context, "Chest Press selected", Toast.LENGTH_SHORT).show();
-                    Intent intent2 = new Intent(view.getContext(), ChestPressInputInfoScreen.class);
-                    view.getContext().startActivity(intent2);
+                    Intent intent = new Intent(view.getContext(), InputInfoScreen.class);
+                    intent.putExtra("Exercise", "Chest Press");
+                    view.getContext().startActivity(intent);
                 }
             }
         });

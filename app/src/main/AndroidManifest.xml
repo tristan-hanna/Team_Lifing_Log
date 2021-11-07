@@ -13,13 +13,7 @@
             android:name=".OverallProgressScreen"
             android:exported="true" />
         <activity
-            android:name=".ChestPressInputInfoScreen"
-            android:exported="true" />
-        <activity
             android:name=".ChestPressGraph"
-            android:exported="true" />
-        <activity
-            android:name=".DeadliftInputInfoScreen"
             android:exported="true" />
         <activity
             android:name=".DeadliftGraph"
@@ -31,7 +25,7 @@
             android:name=".SpecificExerciseScreen"
             android:exported="true" />
         <activity
-            android:name=".BenchPressInputInfoScreen"
+            android:name=".InputInfoScreen"
             android:exported="true" />
         <activity
             android:name=".LogCurrentWorkoutScreen"

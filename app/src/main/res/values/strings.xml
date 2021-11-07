@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Lifting Log</string>
+
+    <string-array name="workout_selctor">
+        <item>Bench Press</item>
+        <item>Deadlift</item>
+        <item>Chest Press</item>
+    </string-array>
 </resources>
