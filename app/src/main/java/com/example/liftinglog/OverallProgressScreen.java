@@ -65,7 +65,7 @@ public class OverallProgressScreen extends AppCompatActivity {
         ExerciseReference3 = ExerciseDatabase.getReference("ChestPressTable");
 
         Bench_Press_Progress_GraphView.getLegendRenderer().setVisible(true);
-        Bench_Press_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
+        Bench_Press_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(5);
         Bench_Press_Progress_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
             public String formatLabel(double value, boolean isValueX) {
@@ -79,7 +79,7 @@ public class OverallProgressScreen extends AppCompatActivity {
         });
 
         Deadlift_Progress_GraphView.getLegendRenderer().setVisible(true);
-        Deadlift_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
+        Deadlift_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(5);
         Deadlift_Progress_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
             public String formatLabel(double value, boolean isValueX) {
@@ -93,7 +93,7 @@ public class OverallProgressScreen extends AppCompatActivity {
         });
 
         Chest_Press_Progress_GraphView.getLegendRenderer().setVisible(true);
-        Chest_Press_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
+        Chest_Press_Progress_GraphView.getGridLabelRenderer().setNumHorizontalLabels(5);
         Chest_Press_Progress_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
             public String formatLabel(double value, boolean isValueX) {
