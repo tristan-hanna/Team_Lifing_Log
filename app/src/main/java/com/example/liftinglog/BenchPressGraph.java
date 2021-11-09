@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,6 +35,7 @@ public class BenchPressGraph extends AppCompatActivity {
 
     GraphView Bench_Press_GraphView;
     LineGraphSeries bench_press_series;
+    Button share_button;
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -44,12 +47,27 @@ public class BenchPressGraph extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bench_press_graph);
 
+        share_button = (Button) findViewById(R.id.Share_Button);
+
         Bench_Press_GraphView = (GraphView) findViewById(R.id.Bench_Press_GraphView);
         bench_press_series = new LineGraphSeries();
         Bench_Press_GraphView.addSeries(bench_press_series);
 
         ExerciseDatabase = FirebaseDatabase.getInstance();
         ExerciseReference = ExerciseDatabase.getReference("chartTable");
+
+        share_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                String shareBody = "Your body here";
+                String shareSub = "Your subject here";
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, shareBody);
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(shareIntent, "Share Using:"));
+            }
+        });
 
         Bench_Press_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
         Bench_Press_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
