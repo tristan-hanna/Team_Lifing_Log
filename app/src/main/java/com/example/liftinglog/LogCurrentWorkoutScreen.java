@@ -8,7 +8,7 @@ import android.os.Bundle;
 public class LogCurrentWorkoutScreen extends AppCompatActivity {
 
     ViewPager mViewPager;
-    int[] images = {R.drawable.bench_press, R.drawable.deadlift, R.drawable.chest_press};
+    int[] images = {R.drawable.edited_bench_press, R.drawable.edited_deadlift, R.drawable.edited_chest_press};
     ViewPagerAdapter mViewPagerAdapter;
 
     @Override
