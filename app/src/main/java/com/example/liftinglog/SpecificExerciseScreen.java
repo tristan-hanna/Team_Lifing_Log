@@ -16,6 +16,7 @@ public class SpecificExerciseScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_specific_exercise_screen);
 
+        //Initializes view pager using view pager adapter
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPagerAdapter = new ViewPagerAdapter2(SpecificExerciseScreen.this, images);
         mViewPager.setAdapter(mViewPagerAdapter);

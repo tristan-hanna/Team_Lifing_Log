@@ -15,6 +15,7 @@ public class HomepageScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage_screen);
 
+        //Initializes buttons on homepages to take users to different screens
         ImageButton currentworkout = (ImageButton) findViewById(R.id.CurrentWorkoutButton);
         currentworkout.setOnClickListener(new View.OnClickListener() {
             @Override

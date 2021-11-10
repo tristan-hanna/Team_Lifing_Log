@@ -37,7 +37,7 @@ public class OverallProgressScreen extends AppCompatActivity {
     //Initializes format for dates that will be displayed on the x-axis
     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
 
-    //Creates a connection to the Firebase database and initializes the
+    //Creates a connection to the Firebase database and attaches the
     //references to it
     FirebaseDatabase ExerciseDatabase;
     DatabaseReference ExerciseReference, ExerciseReference2, ExerciseReference3;

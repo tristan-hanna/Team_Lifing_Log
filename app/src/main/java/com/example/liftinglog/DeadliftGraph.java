@@ -25,7 +25,7 @@ import java.util.Date;
 
 public class DeadliftGraph extends AppCompatActivity {
 
-    //Initializes graph. series and share button
+    //Initializes graph, series and share button
     GraphView Deadlift_GraphView;
     LineGraphSeries deadlift_series;
     Button share_button;
@@ -68,6 +68,7 @@ public class DeadliftGraph extends AppCompatActivity {
             }
         });
 
+        //Formats graph
         Deadlift_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
         Deadlift_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
@@ -86,6 +87,7 @@ public class DeadliftGraph extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        //Populates graph with data from Firebase
         ExerciseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

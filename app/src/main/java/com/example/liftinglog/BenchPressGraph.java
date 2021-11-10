@@ -33,12 +33,16 @@ import java.util.Date;
 
 public class BenchPressGraph extends AppCompatActivity {
 
+    //Initializes graph, series and share button
     GraphView Bench_Press_GraphView;
     LineGraphSeries bench_press_series;
     Button share_button;
 
+    //Initializes format for dates that will be displayed on the x-axis
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
+    //Creates a connection to the Firebase database and initializes the
+    //references to it
     FirebaseDatabase ExerciseDatabase;
     DatabaseReference ExerciseReference;
 
@@ -53,9 +57,11 @@ public class BenchPressGraph extends AppCompatActivity {
         bench_press_series = new LineGraphSeries();
         Bench_Press_GraphView.addSeries(bench_press_series);
 
+        //Connects reference to table in Firebase
         ExerciseDatabase = FirebaseDatabase.getInstance();
         ExerciseReference = ExerciseDatabase.getReference("chartTable");
 
+        //Sets up on click listener to share results
         share_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +75,7 @@ public class BenchPressGraph extends AppCompatActivity {
             }
         });
 
+        //Formats graph
         Bench_Press_GraphView.getGridLabelRenderer().setNumHorizontalLabels(3);
         Bench_Press_GraphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
@@ -87,6 +94,7 @@ public class BenchPressGraph extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+        //Populates graph with data from Firebase
         ExerciseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

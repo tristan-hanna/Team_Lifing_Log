@@ -16,6 +16,7 @@ public class LogCurrentWorkoutScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_current_workout_screen);
 
+        //Initializes view pager using view pager adapter
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPagerAdapter = new ViewPagerAdapter(LogCurrentWorkoutScreen.this, images);
         mViewPager.setAdapter(mViewPagerAdapter);

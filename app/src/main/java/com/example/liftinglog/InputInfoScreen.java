@@ -22,6 +22,8 @@ import java.util.Date;
 
 public class InputInfoScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    //Creates a connection to the Firebase database as well as
+    //references to it
     FirebaseDatabase ExerciseDatabase;
     DatabaseReference ExerciseReference, ExerciseReference2, ExerciseReference3;
 
@@ -43,6 +45,8 @@ public class InputInfoScreen extends AppCompatActivity implements AdapterView.On
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        //Receives name of exercise from the ViewPagerAdapter and automatically
+        //sets spinner to the received name
         Intent intent = getIntent();
         EXERCISE = intent.getStringExtra("Exercise");
         if (EXERCISE.equals("Bench Press"))
@@ -57,6 +61,7 @@ public class InputInfoScreen extends AppCompatActivity implements AdapterView.On
         Submit_Button = (Button) findViewById(R.id.Submit_Button);
         To_Graphs = (Button) findViewById(R.id.To_Graphs);
 
+        //Connects references to Firebase database
         ExerciseDatabase = FirebaseDatabase.getInstance();
         ExerciseReference = ExerciseDatabase.getReference("chartTable");
         ExerciseReference2 = ExerciseDatabase.getReference("DeadliftTable");
@@ -66,6 +71,8 @@ public class InputInfoScreen extends AppCompatActivity implements AdapterView.On
     }
 
     private void setListeners() {
+        //Sets up on click listener that pushes the calculated 1RM using the
+        //values from textviews to the database
         Submit_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,6 +128,7 @@ public class InputInfoScreen extends AppCompatActivity implements AdapterView.On
             }
         });
 
+        //Sets up on click listener that sends user to selected graph to view progress
         To_Graphs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -144,6 +152,7 @@ public class InputInfoScreen extends AppCompatActivity implements AdapterView.On
         });
     }
 
+    //Method that calculates 1RM
     public int calculate1RM(int weightused, int repsdone){
         orm = (int) (weightused/(1.0278 - 0.0278 * repsdone));
         return orm;

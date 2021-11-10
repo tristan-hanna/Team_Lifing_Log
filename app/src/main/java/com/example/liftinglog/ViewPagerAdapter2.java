@@ -41,6 +41,7 @@ public class ViewPagerAdapter2 extends PagerAdapter {
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageViewMain);
         imageView.setImageResource(images[position]);
 
+        //Sets up on click listener for each image based on position
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
