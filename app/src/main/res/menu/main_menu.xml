@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="io.github.yavski.fabspeeddial.samples.PositionSampleActivity">
+    <item
+        android:id="@+id/action_call"
+        android:icon="@drawable/ic_hexbarbell"
+        android:orderInCategory="0"
+        android:title="Barbell Lifts"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_text"
+        android:icon="@drawable/ic_hexbarbell"
+        android:orderInCategory="1"
+        android:title="Dumbbell Lifts"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_email"
+        android:icon="@drawable/ic_hexbarbell"
+        android:orderInCategory="3"
+        android:title="Machine Exercises"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_call"
+        android:icon="@drawable/ic_hexbarbell"
+        android:orderInCategory="4"
+        android:title="Other Exercises"
+        app:showAsAction="never" />
+
+
+</menu>
