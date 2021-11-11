@@ -33,7 +33,7 @@ public class SpecificExerciseScreen extends AppCompatActivity {
                 fabSpeedDial.setMenuListener(new SimpleMenuListenerAdapter() {
                     @Override
                     public boolean onMenuItemSelected(MenuItem menuItem) {
-                        Intent intent = new Intent(SpecificExerciseScreen.this, LogCurrentWorkoutScreen.class );
+                        Intent intent = new Intent(SpecificExerciseScreen.this, OverallProgressScreen.class );
                         startActivity(intent);
                         return true;}
                 });
