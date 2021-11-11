@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentEnd="false"
-    app:layout_anchorGravity="bottom|right|fill_vertical"
+    app:layout_anchorGravity="bottom"
     tools:context=".SpecificExerciseScreen">
 
 
@@ -21,6 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="308dp"
+            android:gravity="bottom">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_for_lift_here_doesn_t_work"
+                android:inputType="textShortMessage|textAutoCorrect"
+                android:maxLines="@integer/material_motion_duration_long_1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <io.github.yavski.fabspeeddial.FabSpeedDial
             android:id="@+id/fab_speed_dail"
